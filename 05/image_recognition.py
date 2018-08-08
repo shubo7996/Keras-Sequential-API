@@ -3,7 +3,7 @@ from keras.preprocessing import image
 from keras.applications import resnet50
 
 # Load Keras' ResNet50 model that was pre-trained against the ImageNet database
-model = resnet50.ResNet(50)
+model = resnet50.ResNet50()
 
 # Load the image file, resizing it to 224x224 pixels (required by this model)
 img = image.load_img('bay.jpg', target_size=(224,224))
