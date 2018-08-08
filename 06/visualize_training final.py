@@ -21,7 +21,7 @@ model.compile(loss='mean_squared_error', optimizer='adam')
 # Create a TensorBoard logger
 logger = keras.callbacks.TensorBoard(
     log_dir='logs/{}'.format(RUN_NAME),
-    histogram_freq=5,
+    histogram_freq=0,
     write_graph=True
 )
 
