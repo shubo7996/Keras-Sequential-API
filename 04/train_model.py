@@ -15,7 +15,9 @@ model.add(Dense(50, activation='relu'))
 model.add(Dense(1, activation='linear'))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
-# Train the model
+# Train the model where x is the data and y is the label(sortof)
+model.fit(X,Y,epochs=50,shuffle= true,verbose=2)
+
 
 
 # Load the separate test data set
@@ -24,5 +26,5 @@ test_data_df = pd.read_csv("sales_data_test_scaled.csv")
 X_test = test_data_df.drop('total_earnings', axis=1).values
 Y_test = test_data_df[['total_earnings']].values
 
-test_error_rate =
+test_error_rate = model.evaluate(X_TEST, Y_TEST, verbose=0)
 print("The mean squared error (MSE) for the test data set is: {}".format(test_error_rate))
