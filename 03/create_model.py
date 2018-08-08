@@ -9,7 +9,7 @@ Y = training_data_df[['total_earnings']].values
 
 # Define the model
 model = Sequential()
-model.add(Dense(50, input_dim= = 9, activation = 'relu'))
+model.add(Dense(50, input_dim = 9, activation = 'relu'))
 model.add(Dense(100, activation = 'relu'))
 model.add(Dense(50, activation= 'relu'))
 model.add(Dense(1, activation= 'linear'))
