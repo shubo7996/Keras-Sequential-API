@@ -18,7 +18,7 @@ x = np.expand_dims(x, axis=0)
 x = resnet50.preprocess_input(x)
 
 # Run the image through the deep neural network to make a prediction
-predictions = models.predict(x)
+predictions = model.predict(x)
 
 # Look up the names of the predicted classes. Index zero is the results for the first image.
 predicted_classes = resnet50.decode_predictions(predictions, top=9)
